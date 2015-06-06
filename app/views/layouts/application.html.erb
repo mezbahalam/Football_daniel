@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Football</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div style="height: 100px;"><%= image_tag "football2.jpg", width: "100%" %></div>
+<br>
+<br>
+<br>
+<br>
+<div class="mezbah">
+    <div class="well" >
+
+        <% if flash[:notice] %>
+            <p class="notice"><%= notice %></p>
+        <% end %>
+        <% if flash[:alart] %>
+            <p class="alert"><%= alert %></p>
+        <% end %>
+
+        <%= yield %>
+      </div>
+    </div>
+</div>
+
+</body>
+</html>
